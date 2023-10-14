@@ -1,0 +1,60 @@
+body {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.price-style {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-color {
+    color: #bd8e80;
+}
+
+a {
+    color: #323232;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bd8e80;
+}
+
+a.nav-link:hover {
+    color: #bd8e80;
+}
+
+.navbar {
+    font-size: 18px;
+}
+
+.carousel-img {
+    width: 450px;
+    height: 400px;
+}
+
+.form-font {
+    font-size: 18px;
+}
+
+.list-inline-item {
+    color: #ffd700
+}
+
+.card-style {
+    width: 220px;
+    height: 160px;
+}
+
+.feedback-card {
+    transition: 0.3s;
+}
+
+.feedback-card:hover {
+    transform: scale(1.3);
+    z-index: 1;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marketplace</title>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row bg-light py-2 px-3">
+            <div class="col-lg-6 d-none d-lg-flex align-items-center">
+                <a href="#" class="text-decoration-none me-2">FAQs</a>
+                <span class="text-muted">|</span>
+                <a href="#" class="text-decoration-none ms-2 me-2">Help</a>
+                <span class="text-muted">|</span>
+                <a href="#" class="text-decoration-none ms-2">Support</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center justify-content-end">
+                    <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="d-none d-sm-inline mx-2">Maria Rossi</span>
+                        <img src="./assets/User.jpg" width="35" height="35" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-center mt-3 mb-3 py-2">
+            <div class="col-lg-3 d-none d-lg-flex align-items-center justify-content-end">
+                <a href="#" class="text-decoration-none">
+                    <h1 class="font-weight-bold" style="margin-top: 0;">
+                        <span class="text-color px-2 border bg-light">e</span>FURNITURE
+                    </h1>
+                </a>
+            </div>
+            <div class="col-lg-6 col-6">
+                <div class="input-group">
+                    <input type="text" class="form-control border text-center"
+                        aria-label="Text input with dropdown button" placeholder="Search for products">
+                    <div class="input-group-append">
+                        <button class="btn border text-color" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 d-flex align-items-center justify-content-end">
+                <a href="#" class="btn border me-2 mr-1">
+                    <i class="fas fa-heart text-color"></i>
+                    <span class="badge px-0">0</span>
+                </a>
+                <a href="#" class="btn border">
+                    <i class="fas fa-shopping-cart text-color"></i>
+                    <span class="badge px-0">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item me-2">
+                    <a class="nav-link text-decoration-none" href="./1-frontpage.html"> <i
+                            class="bi bi-house mx-1 text-color"></i>Home </a>
+                </li>
+                <li class="nav-item me-2">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#feedbackModal">
+                        <i class="bi bi-clipboard2-heart text-color mx-1"></i>Feedbacks
+                    </a>
+                </li>
+                <li class="nav-item me-2">
+                    <a class="nav-link" href="./2-admin.html"> <i class="bi bi-gear text-color mx-1"></i> Admin </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- FEEDBACKS -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="d-flex flex-row">
+                <div class="card-style feedback-card">
+                    <div class="card m-2">
+                        <img class="card-img-top img-fluid" src="./assets/sedie1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mario S.</h5>
+                            <p class="card-text">Fantastic chairs!</p>
+                            <ul class="list-unstyled list-inline my-2">
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                            </ul>
+                            <p class="text-muted">Chair Selena</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-style feedback-card ">
+                    <div class="card m-2">
+                        <img class="card-img-top img-fluid" src="./assets/Poltrona2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Stefania A.</h5>
+                            <p class="card-text">Amazing purchase!</p>
+                            <ul class="list-unstyled list-inline my-2">
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="bi bi-star"></i></li>
+                            </ul>
+                            <p class="text-muted">Armchair France</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-style feedback-card">
+                    <div class="card m-2">
+                        <img class="card-img-top img-fluid" src="./assets/Sofa1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Ilaria M.</h5>
+                            <p class="card-text">Incredible design!</p>
+                            <ul class="list-unstyled list-inline my-2">
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star-half-alt"></i></li>
+                            </ul>
+                            <p class="text-muted">Sofa Greece</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-style feedback-card ">
+                    <div class="card m-2">
+                        <img class="card-img-top img-fluid" src="./assets/Poltrona3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Marco S.</h5>
+                            <p class="card-text">Very expensive!</p>
+                            <ul class="list-unstyled list-inline my-2">
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="bi bi-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="bi bi-star"></i></li>
+                            </ul>
+                            <p class="text-muted">Armchair Veronica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-style feedback-card ">
+                    <div class="card m-2">
+                        <img class="card-img-top img-fluid" src="./assets/Sofa3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Paolo R.</h5>
+                            <p class="card-text">Fashionable!</p>
+                            <ul class="list-unstyled list-inline my-2">
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                            </ul>
+                            <p class="text-muted">Sofa England</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-style feedback-card ">
+                    <div class="card m-2">
+                        <img class="card-img-top img-fluid" src="./assets/Poltrona1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">George S.</h5>
+                            <p class="card-text">Very stylish</p>
+                            <ul class="list-unstyled list-inline my-2">
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
+                                <li class="list-inline-item mx-0"><i class="bi bi-star"></i></li>
+                            </ul>
+                            <p class="text-muted">Sofa Italia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="container-fluid fixed-bottom">
+        <div class="row bg-light py-2 px-3">
+            <div class="col-lg-6 d-none d-lg-flex align-items-center">
+                <span class="text-color px-1 me-1 border bg-light">e</span> FURNITURE &copy; All Rights Reserved
+            </div>
+            <div class="col-lg-6 text-lg-right d-none d-lg-flex align-items-center justify-content-end">
+                <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Includi jQuery prima di Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Includi Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="frontpage.js"></script>
+</body>
+
+</html>
