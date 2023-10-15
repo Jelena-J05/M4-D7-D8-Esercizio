@@ -11,7 +11,7 @@ function displayProducts(data) {
   const productSection = document.getElementById("row");
   productSection.innerHTML = data.map((product) => {
     return `
-      <div class='col col-4 mt-5'>
+      <div class='col col-4 mt-5 column'>
         <div class="card border-1 rounded p-1">
           <img src='${product.imageUrl}' class="img-fluid card-img-top" alt='${product.alt}' />
           <div class="card-body">
@@ -42,7 +42,7 @@ const searchProduct = () => {
     allTitles[0].innerText.toLowerCase().includes(query.toLowerCase())
   );
   allTitles.forEach((title) => {
-    const currCard = title.closest('.card');
+    const currCard = title.closest('.column');
     if (!title.innerText.toLowerCase().includes(query.toLowerCase())) {
       currCard.style.display = "none";
     } else {
@@ -52,7 +52,7 @@ const searchProduct = () => {
 }
 
 const filterByCategory = (category) => {
-  const allCards = document.querySelectorAll(".card");
+  const allCards = document.querySelectorAll(".column");
 
   allCards.forEach((card) => {
     const cardTitle = card.querySelector(".product-title").innerText.toLowerCase();
