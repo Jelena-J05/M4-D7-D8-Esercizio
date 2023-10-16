@@ -24,7 +24,7 @@ async function addProduct(event) {
     const price = document.querySelector("#price").value;
 
 
-        const product = {
+    const product = {
         name,
         description,
         brand,
@@ -56,7 +56,7 @@ async function addProduct(event) {
 }
 
 function displayProducts(data) {
-    const productsHTML = data.map(({_id, name, description, brand, imageUrl, price }) => `
+    const productsHTML = data.map(({ _id, name, description, brand, imageUrl, price }) => `
             <div class="col-2 border border-1 mb-2 p-0"> <img src="${imageUrl}" alt="${description}" class="img-fluid" /> </div>
             <div class="col-2">${name}</div>
             <div class="col-2">${description}</div>
