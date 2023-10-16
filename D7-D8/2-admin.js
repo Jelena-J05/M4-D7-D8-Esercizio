@@ -1,9 +1,4 @@
 const mainRow = document.querySelector("#row");
-const name = document.querySelector("#name").value;
-const description = document.querySelector("#description").value;
-const brand = document.querySelector("#brand").value;
-const imageUrl = document.querySelector("#image").value;
-const price = document.querySelector("#price").value;
 
 async function getProducts() {
     try {
@@ -22,9 +17,14 @@ async function getProducts() {
 
 async function addProduct(event) {
     event.preventDefault();
+    const name = document.querySelector("#name").value;
+    const description = document.querySelector("#description").value;
+    const brand = document.querySelector("#brand").value;
+    const imageUrl = document.querySelector("#image").value;
+    const price = document.querySelector("#price").value;
 
 
-    const product = {
+        const product = {
         name,
         description,
         brand,
@@ -56,7 +56,7 @@ async function addProduct(event) {
 }
 
 function displayProducts(data) {
-    const productsHTML = data.map(({ _id, name, description, brand, imageUrl, price }) => `
+    const productsHTML = data.map(({_id, name, description, brand, imageUrl, price }) => `
             <div class="col-2 border border-1 mb-2 p-0"> <img src="${imageUrl}" alt="${description}" class="img-fluid" /> </div>
             <div class="col-2">${name}</div>
             <div class="col-2">${description}</div>
@@ -77,30 +77,30 @@ async function handleEdit(id) {
 
     const { name, description, brand, imageUrl, price } = productJson
 
-    const productDataRow = document.querySelector(`#${_id}`)
+    const productDataRow = document.querySelector(`#_${id}`)
 
-    productDataRow.innerHTML = /*html*/`
-    <form class="d-flex flex-column" id="form" onsubmit="handleEditSubmit(event,'${_id}')">
+    productDataRow.innerHTML = `
+    <form class="d-flex flex-column" id="form" onsubmit="handleEditSubmit(event,'${id}')">
     <div class="row mb-3">
         <!-- 1st Column -->
         <div class="col-6">
             <label for="name">Name</label>
-            <input required id="name" type="text" class="form-control" placeholder="Karin Sofa" value="${name}">
+            <input required name="name" type="text" class="form-control" placeholder="Karin Sofa" value="${name}">
         </div>
         <div class="col-6">
             <label for="description">Description</label>
-            <input required id="description" type="text" class="form-control" placeholder="2 seater sofa" value="${description}">
+            <input required name="description" type="text" class="form-control" placeholder="2 seater sofa" value="${description}">
         </div>
     </div>
     <div class="row mb-3">
         <!-- 2nd Column -->
         <div class="col-6">
             <label for="brand">Brand</label>
-            <input required id="brand" type="text" class="form-control" placeholder="Agape" value="${brand}">
+            <input required name="brand" type="text" class="form-control" placeholder="Agape" value="${brand}">
         </div>
         <div class="col-6">
             <label for="image">Image URL</label>
-            <input required id="image"type="text" class="form-control" placeholder="https://ibb.co/yNYC0rk" value="${imageUrl}">
+            <input required name="image"type="text" class="form-control" placeholder="https://ibb.co/yNYC0rk" value="${imageUrl}">
         </div>
     </div>
     <div class="row mb-3">
@@ -123,7 +123,7 @@ async function handleEdit(id) {
 async function handleEditSubmit(e, id) {
     e.preventDefault();
     e.target.classList.add("pe-none")
-    e.target.querySelector("button[type=submit]").innerHTML = /*html*/ `
+    e.target.querySelector("button[type=submit]").innerHTML = `
       <div class="d-flex justify-content-center">
         <div class="spinner-border" role="status">
           <span class="visually-hidden">Loading...</span>
@@ -131,11 +131,11 @@ async function handleEditSubmit(e, id) {
       </div>
     `;
 
-    const name = form.querySelector("#name");
-    const description = form.querySelector("#description");
-    const brand = form.querySelector("#brand");
-    const imageUrl = form.querySelector("#image");
-    const price = form.querySelector("#price");
+    const name = document.querySelector(`#_${id} [name='name']`);
+    const description = document.querySelector(`#_${id} [name='description']`);
+    const brand = document.querySelector(`#_${id} [name='brand']`);
+    const imageUrl = document.querySelector(`#_${id} [name='image']`);
+    const price = document.querySelector(`#_${id} [name='price']`);
 
     const updatedProduct = {
         name: name.value,
@@ -165,13 +165,17 @@ async function handleEditSubmit(e, id) {
     }
 }
 
+async function handleEditCancel() {
+    displayProducts(await getProducts())
+}
+
 async function handleDelete(id) {
 
     if (!confirm("Are you sure you want to delete this product?")) {
         return
     }
 
-    const response = await fetch(`https://striveschool-api.herokuapp.com/api/product/${id}`, {
+    const response = await fetch("https://striveschool-api.herokuapp.com/api/product/" + id, {
         method: "DELETE",
         headers: {
             "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFkYjJiNDUyYmJmMzAwMTg3OWIyNjkiLCJpYXQiOjE2OTY0NDgxNTUsImV4cCI6MTY5NzY1Nzc1NX0.sR_M_1Mlzvu3UIDmfFG3N8ec_vW7RO_hXF7MeXML2cY"
